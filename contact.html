@@ -8,28 +8,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet/style.css">
+    <script>
+        const oneOrMoreWordsWithWhitespaces = new RegExp('[\\s*[A-Z][a-z]*\\s*]+');
+        const emailAddressRegexp = new RegExp('[a-zA-Z]{3,}@[a-zA-Z]{3,}\.[a-zA-Z]{2,}')
+        function validateForm() {
+            const nameInput = document.getElementById("name")
+            const emailInput = document.getElementById("email")
+            if (!oneOrMoreWordsWithWhitespaces.test(nameInput.value)){
+                alert('Wrong input in name field')
+                return false
+            }
+            if (!emailAddressRegexp.test(emailInput.value)){
+                alert('Wrong input in email field')
+                return false
+            }
+            alert('Message has been sent')
+            nameInput.value = ""
+            emailInput.value = ""
+            document.getElementById('message').value = ""
+            return true
+        }
+    </script>
 </head>
-
 <body>
+        <nav class="navBar">
+            <a class="home" href="index.html">O mnie</a>
+            <a href="education.html">Wykształcenie</a>
+            <a href="hobby.html">Hobby</a>
+            <a href="contact.html">contact</a>
+        </nav>
     <section class="contact">
+        
         <h1>Skontaktuj się ze mną</h1>
         <div class="wrap clearfix">
-            <form>
-                <input type="text" placeholder="Imię">
-                <input type="text" placeholder="Email">
-                <textarea type="text" placeholder="Twoja wiadomość"></textarea>
-                <button>Wyślij Wiadomość</button>
+            <form onsubmit='return validateForm()'> 
+                <input id="name" required type="text" placeholder="Enter your name">
+                <input id="email" type="text" placeholder="your Email">
+                <textarea id="message"  placeholder="Twoja wiadomość"></textarea>
+                <button type="submit">SEND</button>
             </form>
             <div class="socials">
-                <div class="social clearfic"><img src="pictures/contact1.png" alt="kontakt"><span> nataliapikor41@gmail.pl</span></div>
-                <div class="social clearfic"><img src="pictures/contact2.png" alt="kontakt"><span> 690315727</span></div>
-                <div class="social clearfic"><img src="pictures/contact5.png" alt="kontakt"><span> nataliapikor</span>
+                <div class="social clearfic"><img src="pictures/contact1.png" alt="kontakt"><span class="social">nataliapikor41@gmail.pl</span></div>
+                <div class="social clearfic"><img src="pictures/contact2.png" alt="kontakt"><span class="social">690315727</span></div>
+                <div class="social clearfic"><img src="pictures/contact5.png" alt="kontakt"><span class="social">nataliapikor</span>
                 </div>
-            </div>
+            </div>ś
 
         </div>
     </section>
     <footer class="footer">&copy; Natalia Pikor</footer>
 </body>
-
 </html>

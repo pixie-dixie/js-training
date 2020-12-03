@@ -1,235 +1,669 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header{
-    font-family: 'Roboto Mono', monospace,sans-serif;
+
+/*strona O mnie*/
+header {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+header {
+  position: relative;
+  background-image: url(../pictures/tloglowne.jpg);
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.pixi {
+  top: 0vh;
+  border-radius: 20vw 20vw;
+  width: 250px;
+  height: 300px;
+  padding-right: 12px;
+  float: right;
+  shape-outside: circle(50%);
 
 }
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
+
+header>* {
+  position: absolute;
 }
-button {
-margin-top: 24px;
-line-height: 40px;
-font-size:16px;
+
+header img {
+  height: 50%;
+  bottom: 0;
+  right: 0;
 }
-/*kontakt*/
-.contact{
-    background: #000;
-    padding: 30px 20px;
+
+header div.welcome {
+  font-family: 'Roboto Mono',
+    sans-serif;
+  color: rgb(177, 192, 162);
+  font-size: 20px;
+  text-align: right;
+  padding-left: 15vw;
+  padding-bottom: 90px;
 }
-.contact h1{
-    font-family: 'Roboto Mono', monospace,sans-serif;
+
+header h1 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+header h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+header button {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-weight: 300;
+  line-height: 32px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  font-size: 12px;
+  border: 2px solid white;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header h2 {
+    font-size: 24px;
+  }
+
+  header button {
+    margin-top: 24px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+  header h1 {
     font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    color: white;ś
-    text-align: center;
+  }
+
+  header h2 {
+    font-size: 26px;
+  }
+
+  header button {
+    margin-top: 40px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+
+  header img {
+    right: -20%;
+  }
 }
-.contact .wrap{
-    font-family: 'Roboto Mono', monospace,sans-serif;
-    padding-top: 21px;
-    max-width: 1024px;
-    margin: 0 auto;
+
+@media (orientation: portrait) and (min-width: 768px) {
+  header p {
+    font-size: 80px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  header h2 {
+    font-size: 32px;
+  }
+
+  header button {
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+
+  header img {
+    right: -20%;
+  }
 }
+
+
+@media (orientation: landscape) {
+  header img {
+    height: 80%;
+    bottom: 0;
+    right: -5%;
+  }
+
+  header div.welcome {
+    top: 15%;
+    left: 7%;
+    right: 48%;
+  }
+
+  header button {
+    margin-top: 40px;
+  }
+
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header h2 {
+    font-size: 24px;
+  }
+
+  header button {
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+  header div.welcome {
+    left: 3%;
+  }
+
+  header p {
+    font-size: 56px;
+  }
+
+  header h1 {
+    margin-top: 40px;
+    font-size: 34px;
+  }
+
+  header h2 {
+    font-size: 34px;
+  }
+
+  header button {
+    margin-top: 80px;
+    font-size: 28px;
+    line-height: 70px;
+  }
+
+  header img {
+    right: -22%;
+    height: 85%;
+
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+
+  header div.welcome {
+    text-align: left;
+    left: 6%;
+  }
+
+  header p {
+    font-size: 100px;
+  }
+
+  header h1 {
+    margin-top: 40px;
+    font-size: 50px;
+  }
+
+  header h2 {
+    font-size: 50px;
+  }
+
+  header button {
+    margin-top: 100px;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 40px;
+    border-width: 2px;
+  }
+
+  header img {
+    right: -18%;
+    height: 80%;
+
+  }
+
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+
+  header div.welcome {
+    left: 8%;
+  }
+
+  header p {
+    font-size: 120px;
+  }
+
+  header h1 {
+    margin-top: 40px;
+    font-size: 60px;
+  }
+
+  header h2 {
+    font-size: 60px;
+  }
+
+  header button {
+    line-height: 90px;
+  }
+
+  header img {
+    right: -8%;
+    height: 90%;
+
+  }
+
+}
+
+@media (min-width: 1024px) {
+  header button {
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  header button:hover {
+    background-color: #fff;
+    color: #111;
+  }
+
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+button {
+  margin-top: 24px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+/*kontakt*/
+.contact {
+  background: #000;
+  padding: 30px 20px;
+}
+
+.contact h1 {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-size: px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+}
+
+.contact .wrap {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  padding-top: 21px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .contact input,
 .contact button,
 .contact textarea {
-    width: 100%;
-    margin-bottom: 25px;
-    font-size: 12px;
-    padding:5px;
+  width: 100%;
+  margin-bottom: 25px;
+  font-size: 12px;
+  padding: 5px;
 }
+
 .contact button:hover {
-    color: black;
-    background-color: #fff;
+  color: black;
+  background-color: #fff;
 }
-.contact input{
-    height: 38px;
+
+.contact input {
+  height: 38px;
 }
-.contact textarea{
-    height: 120px;
+
+.contact textarea {
+  height: 120px;
 }
-.contact button{
-    font-size: 15px;
-    line-height: 40px;
-    background-color: black;
-    color: blanchedalmond;
-    border: 2px solid blanchedalmond;
+
+.contact button {
+  font-size: 15px;
+  line-height: 40px;
+  background-color: black;
+  color: blanchedalmond;
+  border: 2px solid blanchedalmond;
 }
-.contact .socials{
-    padding-top: 31px;
-    font-size: 0;
+
+.contact .socials {
+  padding-top: 31px;
+  font-size: 0;
 }
-.contact .social{
-    padding: 10px 0;
-    color: white;
-    font-family: 'Roboto Mono', monospace,sans-serif;
+
+.contact .social {
+  padding: 10px 0;
+  color: white;
+  font-family: 'Roboto Mono', monospace, sans-serif;
 
 }
-.contact .social span{
-    line-height: 72px;
-    padding-left: 20px;
-    float: left;
-    font-size: 20px;
+
+.contact .social span {
+  line-height: 72px;
+  padding-left: 20px;
+  float: left;
+  font-size: 20px;
 }
+
 @media (min-width: 533px) {
-    .contact .social {
-        display: inline-block;
-        width: 50%;
-    }
+  .contact .social {
+    display: inline-block;
+    width: 50%;
+  }
 }
-@media (min-width: 1024px) {
-    .contact h1 {
-        font-size: 60px;
-        padding: 30px 0;
-    }
-    .contact .form,
-    .contact .socials{
-        float: left;
-        width: 50%;
-        padding: 0 20px;
-    }
 
-    .contact .social{
-        display: block;
-        width: 50%;
-        margin: 0 auto;
-    }
-    .contact input,
-    .contact button,
-    .contact textarea {
-        margin-bottom: 36px;
-    }
-    .contact input{
-        height: 45px;
-        font-size: 24px;
-    }
-    .contact textarea {
-        height: 180px;
-        font-size: 24px;
-    }
-    .contact button {
-        font-size: 20px;
-        line-height: 50px;
-        transition:.3s;
-        cursor: pointer;
-    }
-    
-}
-.contact .socials img {
+@media (min-width: 1024px) {
+  .contact h1 {
+    font-size: 60px;
+    padding: 30px 0;
+  }
+
+  .contact .form,
+  .contact .socials {
     float: left;
-}
-/*sekcja hobby*/
-.hobby {
-    max-width: 1920px;
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .contact .social {
+    display: block;
+    width: 50%;
     margin: 0 auto;
   }
-  .hobby .item{
-height: 25vh;
+
+  .contact input,
+  .contact button,
+  .contact textarea {
+    margin-bottom: 36px;
   }
-.hobby .item:nth-child(1) {
-    background-image: url(../pictures/jemiola-szyszki-i-prezenty-na-czerwonym-stole-zyczenia-bozonarodzeniowe_24972-1304.jpg);
-    background-size: initial;
-}
-.hobby .item:nth-child(2) {
-    background-image: url(../pictures/rakieta-tenisowa-i-nowa-pilka-tenisowa-na-swiezo-pomalowanym-korcie-tenisowym_146671-18857.jpg);
-}
-.hobby .item:nth-child(3) {
-    background-image: url(../pictures/jemiola-szyszki-i-prezenty-na-czerwonym-stole-zyczenia-bozonarodzeniowe_24972-1304.jpg)
-}
-.hobby .item:nth-child(4) {
-    background-image: url(../pictures/pexels-lumn-406014.jpg);
+
+  .contact input {
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .contact textarea {
+    height: 180px;
+    font-size: 24px;
+  }
+
+  .contact button {
+    font-size: 20px;
+    line-height: 50px;
+    transition: .3s;
+    cursor: pointer;
+  }
+
 }
 
-.hobby .item p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:white;
-    text-align: center;
-    text-shadow: 0 0 4px black;
-    background-color: rgba(0, 0, 0, .5);
-    font-size: 20px;
-    padding: 5px 0;
+.contact .socials img {
+  float: left;
 }
+
+/*sekcja hobby*/
+.hobby {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.hobby .item {
+  height: 25vh;
+}
+
+.hobby .item {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hobby .item:nth-child(3) {
+  background-image: url(../pictures/jemiola-szyszki-i-prezenty-na-czerwonym-stole-zyczenia-bozonarodzeniowe_24972-1304.jpg);
+}
+
+.hobby .item:nth-child(2) {
+  background-image: url(../pictures/rakieta-tenisowa-i-nowa-pilka-tenisowa-na-swiezo-pomalowanym-korcie-tenisowym_146671-18857.jpg);
+}
+
+.hobby .item:nth-child(5) {
+  background-image: url(../pictures/pexels-lumn-406014.jpg)
+}
+
+.hobby .item:nth-child(4) {
+  background-image: url(../pictures/5G.jpg)
+}
+
+.hobby .item p {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 4px black;
+  background-color: rgba(0, 0, 0, .5);
+  font-size: 20px;
+  padding: 5px 0;
+}
+
 .hobby h1 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 20px;
-    text-align: center;
-    font-size: 36px;
-    text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  padding: 20px;
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+@media (min-width:533px) {
+  .hobby .item {
+    float: left;
+    width: 50%;
+    height: 40vh;
   }
-  @media (min-width:533px) {
-    .hobby .item {
-      float: left;
-      width: 50%;
-      height: 40vh;
-    }
+}
+
+@media (min-width:768px) {
+
+  .hobby h1 {
+    font-size: 48px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+
   }
-  
-  @media (min-width:768px) {
-  
-    .hobby h1 {
-      font-size: 48px;
-      margin-top: 40px;
-      margin-bottom: 35px;
-  
-    }
-  
-    .hobby .item p {
-      font-size: 30px;
-      padding: 15px 0;
-    }
+
+  .hobby .item p {
+    font-size: 30px;
+    padding: 15px 0;
   }
-  
-  @media (min-width: 1024px) {
-    .hobby .item p {
-      padding: 0;
-      line-height: 40vh;
-      opacity: 0;
-      transition: 1s;
-      cursor: default;
-    }
-  
-    .hobby .item:hover p {
-      opacity: 1;
-    }
-  
-    .hobby .item {
-      background-size: 100%;
-      transition: 1s;
-    }
-  
-    .hobby .item:hover {
-      background-size: 130%;
-    }
-  
+}
+
+@media (min-width: 1024px) {
+  .hobby .item p {
+    padding: 0;
+    line-height: 40vh;
+    opacity: 0;
+    transition: 1s;
+    cursor: default;
   }
-  
-  @media (min-width: 1600px) {
-    .hobby h1 {
-      font-size: 60px;
-      margin-top: 50px;
-      margin-bottom: 45px;
-  
-    }
-  
-    .hobby .item p {
-      font-size: 40px;
-    }
+
+  .hobby .item:hover p {
+    opacity: 1;
   }
-  
+
+  .hobby .item {
+    background-size: 100%;
+    transition: 1s;
+  }
+
+  .hobby .item:hover {
+    background-size: 130%;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .hobby h1 {
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 45px;
+
+  }
+
+  .hobby .item p {
+    font-size: 40px;
+  }
+}
+
+/*o mnie*/
+/*nawigacja*/
+nav.navBar {
+  position: absolute;
+  top: 0;
+  left: auto;
+  background-color: #1E1E1E;
+  height: 100vh;
+}
+
+nav a {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 10px;
+  color: rgb(177, 192, 162);
+  display: block;
+}
+
+a:hover {
+  font-size: 15px;
+  transition: 0.6s;
+  padding-bottom: 10;
+}
+
+/*education*/
+body.education {
+  min-height: 300vh;
+  background-size: cover;
+}
+
+header.education {
+  height: 80vh;
+  background-position: center bottom;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  background-image: url(../pictures/tlo.jpg);
+}
+
+h1.education {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 20px 0;
+
+}
+
+section.education {
+  width: 80%;
+  margin: 100px auto 0;
+  line-height: 1.9;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+/*animacja*/
+div.animacja {
+  padding-top: 10em;
+  padding-left: 10em;
+  padding-right: 5em;
+  padding-bottom: 10em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.textanime p {
+  color: rgb(177, 192, 162);
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  ;
+  overflow: hidden;
+  border-right: .15em solid rgb(177, 192, 162);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+  text-align: center;
+}
+
+.welcome {
+  bottom: 50px;
+  left: 0;
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: auto;
+  padding: 20px 0;
+
+}
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: rgb(177, 192, 162);
+  }
+}
+
 /*footer*/
 footer {
-    background-color:rgb(71, 70, 70);
-    color: white;
-    font-family: saira, sans-serif;
-    text-align: center;
-    padding: 8px;
-    font-size: 14px;
-  }
-    
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-family: 'Roboto Mono', monospace, sans-serif;
 
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/*lista o mnie*/
+.aboutme {
+  color: rgb(177, 192, 162);
+
+}
